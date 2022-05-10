@@ -25,6 +25,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary' -----------------> comentar linhas
   use 'Raimondi/delimitMate' -----------------> fecha parênteses, etc.
   use 'preservim/nerdtree' -------------------> mostra os arquivos
+  use 'jalvesaq/Nvim-R' ----------------------> para usar o R
 end)
 
 
