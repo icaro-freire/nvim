@@ -1,5 +1,9 @@
 # Configurações pessoais para o Neovim
 
+> Esse repositório servirá para versionamento de minhas configurações para o Neovim.
+
+---
+
 ## Mais do que um editor ...
 
 O [Neovim](https://neovim.io/) é escrito em [Lua](https://www.lua.org/), tornando-o extramamente rápido, leve e com muitos diferenciais positivos em relação ao clássico editor de textos [Vim](https://www.vim.org/), no qual é baseado. 
@@ -11,7 +15,7 @@ O [Neovim](https://neovim.io/) é escrito em [Lua](https://www.lua.org/), tornan
 Esse repositório está organizado assim:
 
 ```bash
-.
+.config/nvim
 ├── init.lua
 ├── lua
 │   ├── complete.lua
@@ -21,19 +25,6 @@ Esse repositório está organizado assim:
 │   ├── settings.lua
 │   └── tabnine.lua
 └── README.md
-```
-
-```<pre>
-📦nvim
- ┣ 📂lua
- ┃ ┣ 📜complete.lua
- ┃ ┣ 📜lsp.lua
- ┃ ┣ 📜mappings.lua
- ┃ ┣ 📜plugins.lua
- ┃ ┣ 📜settings.lua
- ┃ ┗ 📜tabnine.lua
- ┣ 📜README.md
- ┗ 📜init.lua
 ```
 
 ## Créditos 
