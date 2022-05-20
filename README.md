@@ -42,14 +42,14 @@ unzip icaro-freire-neovim_config-252fe30.zip && rm icaro-freire-neovim_config-25
 ```
 4. por fim, execute `./config_neovim.sh`
 
-:warning: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
+:heavy_exclamation_mark: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
 
 - `unzip icaro-freire-neovim_config-252fe30.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-252fe30`
 - `rm icaro-freire-neovim_config-252fe30.zip`; deleta o arquivo `.zip`
 - `mv icaro-freire-neovim_config-252fe30/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
 - `rm icaro-freire-neovim_config-252fe30 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
 
-:white_check_mark: Já o comando "4.", executa o _script_ `config_neovim.sh`.
+:bangbang: Já o comando "4.", executa o _script_ `config_neovim.sh`.
 
 [SCRIPT]: https://github.com/icaro-freire/neovim_config/blob/config_neovim/config_neovim.sh
 [GIT]: https://git-scm.com/
