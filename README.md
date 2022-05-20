@@ -27,10 +27,10 @@ Esse repositório está organizado assim:
 
 ## Instalação com script
 
-O [script][SCRIPT] fará uma instalação quase automática das configurações deste 
+O _script_ [config_neovim][SCRIPT] fará uma instalação quase automática das configurações deste 
 repositório.
 
-> É necessário ter o [Git][GIT] instalado em seu sistema.
+> :zap: É necessário ter o [Git][GIT] instalado em seu sistema.
 
 Para executar o _script_, siga os passos:
 
