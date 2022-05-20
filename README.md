@@ -36,7 +36,10 @@ Para executar o _script_, siga os passos:
 
 1. faça o _download_ do ramo onde se encontra o arquivo, por esse link: [:link: config_neovim][ZIP];
 2. abra o terminal no diretório onde o arquivo do _download_ foi salvo;
-3. execute o seguinte comando `unzip icaro-freire-neovim_config-252fe30.zip && rm icaro-freire-neovim_config-252fe30.zip && mv icaro-freire-neovim_config-252fe30/config_neovim.sh . && rm icaro-freire-neovim_config-252fe30 -rf`
+3. execute o seguinte comando:
+```
+unzip icaro-freire-neovim_config-252fe30.zip && rm icaro-freire-neovim_config-252fe30.zip && mv icaro-freire-neovim_config-252fe30/config_neovim.sh . && rm icaro-freire-neovim_config-252fe30 -rf
+```
 4. por fim, execute `./config_neovim.sh`
 
 :warning: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
