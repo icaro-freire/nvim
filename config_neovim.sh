@@ -20,7 +20,7 @@ git clone https://github.com/icaro-freire/neovim_config.git
 
 sleep 2s
 
-echo "Feito 1/7"
+echo "Feito 1/8"
 
 sleep 1s
 
@@ -34,7 +34,7 @@ sed -i '5,7 s/^/--/g' neovim_config/init.lua
 
 sleep 3s
 
-echo "Feito 2/7"
+echo "Feito 2/8"
 
 sleep 1s
 
@@ -48,7 +48,7 @@ mkdir -p ~/.config/nvim
 
 sleep 4s
 
-echo "Feito 3/7"
+echo "Feito 3/8"
 
 sleep 1s
 
@@ -62,7 +62,7 @@ mv neovim_config/init.lua neovim_config/lua ~/.config/nvim
 
 sleep 4s
 
-echo "Feito 4/7"  
+echo "Feito 4/8"  
 
 sleep 2s 
 
@@ -76,13 +76,24 @@ rm neovim_config -rf
 
 sleep 4s
 
-echo "Feito 5/7"
+echo "Feito 5/8"
 
 sleep 2s
 
 echo ""
 
 # passo 6 ---------------------------------------------------------------------
+
+echo "-- Clonando o repositório do Packer (instalador de Plugins)"
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+sleep 4s
+
+echo "Feito 6/8"
+
+# passo 7 ---------------------------------------------------------------------
 
 echo "-- Será aberto o arquvo init.lua para instalação do Packer"
 echo "   Digite :PackerInstall e, depois de concluído, :wq"
@@ -91,13 +102,13 @@ sleep 8s
 
 nvim ~/.config/nvim/init.lua
 
-echo "Feito 6/7"
+echo "Feito 7/8"
 
 sleep 2s
 
 echo ""
 
-# passo 7 ---------------------------------------------------------------------
+# passo 8 ---------------------------------------------------------------------
 
 echo "-- Novamente, será aberto o init.lua"
 echo "   Dessa vez, retire os comentários das linhas 5, 6 e 7 (basta retirar os traços -- )"
@@ -109,7 +120,7 @@ nvim ~/.config/nvim/init.lua
 
 sleep 2s
 
-echo "Feito 7/7"
+echo "Feito 8/8"
 
 sleep 2s 
 
