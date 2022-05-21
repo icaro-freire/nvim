@@ -12,7 +12,7 @@
 
 # passo 0 ---------------------------------------------------------------------
 
-rm -rf ~/.config/nvim ~/.local/share/nvimecho "-- Removendo possíveis configurações antigas"
+echo "-- Removendo possíveis configurações antigas"
 
 rm ~/.config/nvim ~/.local/share/nvim -rf
 
