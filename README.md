@@ -38,16 +38,16 @@ Para executar o _script_, siga os passos:
 2. abra o terminal no diretório onde o arquivo do _download_ foi salvo;
 3. execute o seguinte comando:
 ```
-unzip icaro-freire-neovim_config-252fe30.zip && rm icaro-freire-neovim_config-252fe30.zip && mv icaro-freire-neovim_config-252fe30/config_neovim.sh . && rm icaro-freire-neovim_config-252fe30 -rf
+unzip icaro-freire-neovim_config-625ca2e.zip && rm icaro-freire-neovim_config-625ca2e.zip && mv icaro-freire-neovim_config-625ca2e/config_neovim.sh . && rm icaro-freire-neovim_config-625ca2e.zip -rf
 ```
 4. por fim, execute `./config_neovim.sh`
 
 :heavy_exclamation_mark: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
 
-- `unzip icaro-freire-neovim_config-252fe30.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-252fe30`
-- `rm icaro-freire-neovim_config-252fe30.zip`; deleta o arquivo `.zip`
-- `mv icaro-freire-neovim_config-252fe30/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
-- `rm icaro-freire-neovim_config-252fe30 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
+- `unzip icaro-freire-neovim_config-625ca2e.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-252fe30`
+- `rm icaro-freire-neovim_config-625ca2e.zip`; deleta o arquivo `.zip`
+- `mv icaro-freire-neovim_config-625ca2e/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
+- `rm icaro-freire-neovim_config-625ca2e -rf`; deleta o diretório que foi extraído do arquivo `.zip`
 
 :bangbang: Já o comando "4.", executa o _script_ `config_neovim.sh`.
 
@@ -57,8 +57,7 @@ unzip icaro-freire-neovim_config-252fe30.zip && rm icaro-freire-neovim_config-25
 
 ## Uma resalva
 
-Os testes foram realizados em uma distribuição `Pop!_OS LTS 20.04` e numa 
-distribuição `Debian 11`.
+Os testes foram realizados em uma distribuição `Pop!_OS LTS 20.04`; numa distribuição `Xububtu 20.04 LTS` e numa distribuição `Debian 11`.
 
 ## Créditos 
 
