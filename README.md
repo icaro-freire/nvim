@@ -38,16 +38,16 @@ Para executar o _script_, siga os passos:
 2. abra o terminal no diretório onde o arquivo do _download_ foi salvo;
 3. execute o seguinte comando:
 ```
-unzip icaro-freire-neovim_config-a0d1420.zip && rm icaro-freire-neovim_config-a0d1420.zip && mv icaro-freire-neovim_config-a0d1420/config_neovim.sh . && rm icaro-freire-neovim_config-a0d1420 -rf
+unzip icaro-freire-neovim_config-1ae4d72.zip && rm icaro-freire-neovim_config-1ae4d72.zip && mv icaro-freire-neovim_config-1ae4d72/config_neovim.sh . && rm icaro-freire-neovim_config-1ae4d72 -rf
 ```
 4. por fim, execute `./config_neovim.sh`
 
 :heavy_exclamation_mark: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
 
-- `unzip icaro-freire-neovim_config-a0d1420.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-252fe30`
-- `rm icaro-freire-neovim_config-a0d1420.zip`; deleta o arquivo `.zip`
-- `mv icaro-freire-neovim_config-a0d1420/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
-- `rm icaro-freire-neovim_config-a0d1420 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
+- `unzip icaro-freire-neovim_config-1ae4d72.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-252fe30`
+- `rm icaro-freire-neovim_config-1ae4d72.zip`; deleta o arquivo `.zip`
+- `mv icaro-freire-neovim_config-1ae4d72/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
+- `rm icaro-freire-neovim_config-1ae4d72 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
 
 :bangbang: Já o comando "4.", executa o _script_ `config_neovim.sh`.
 
