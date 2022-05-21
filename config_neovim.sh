@@ -28,9 +28,9 @@ echo ""
 
 # passo 2 ---------------------------------------------------------------------
 
-echo "-- Comentando as linhas 5, 6 e 7 do init.lua"
+echo "-- Comentando as linhas do init.lua"
 
-sed -i '5,7 s/^/--/g' neovim_config/init.lua
+sed -i 's/^require/--require/g' neovim_config/init.lua
 
 sleep 3s
 
@@ -96,7 +96,7 @@ echo "Feito 6/8"
 # passo 7 ---------------------------------------------------------------------
 
 echo "-- Será aberto o arquvo init.lua para instalação do Packer"
-echo "   Digite :PackerInstall e, depois de concluído, :wq"
+echo "   Digite :PackerInstall e, depois de concluído, saia do nvim (:q duas vezes)"
 
 sleep 8s 
 
@@ -111,10 +111,11 @@ echo ""
 # passo 8 ---------------------------------------------------------------------
 
 echo "-- Novamente, será aberto o init.lua"
-echo "   Dessa vez, retire os comentários das linhas 5, 6 e 7 (basta retirar os traços -- )"
+echo "   Dessa vez, retire os comentários (basta retirar os traços -- ) do nome require"
+echo "   :1,13 s/^--r/r (faz mais rápido)
 echo "   Depois digite, no modo normal, :wq"
 
-sleep 10s
+sleep 12s
 
 nvim ~/.config/nvim/init.lua
 
