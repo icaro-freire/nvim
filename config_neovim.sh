@@ -10,6 +10,18 @@
 #                   Licença  : The MIT Licence (MIT) 
 #==============================================================================
 
+# passo 0 ---------------------------------------------------------------------
+
+rm -rf ~/.config/nvim ~/.local/share/nvimecho "-- Removendo possíveis configurações antigas"
+
+rm ~/.config/nvim ~/.local/share/nvim -rf
+
+sleep 2s 
+
+echo "Feito 0/8"
+
+sleep 2s
+
 # passo 1 ---------------------------------------------------------------------
 
 echo "-- Clonando o repositório"
