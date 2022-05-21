@@ -38,7 +38,7 @@ Para executar o _script_, siga os passos:
 2. abra o terminal no diretório onde o arquivo do _download_ foi salvo;
 3. execute o seguinte comando:
 ```
-unzip icaro-freire-neovim_config-625ca2e.zip && rm icaro-freire-neovim_config-625ca2e.zip && mv icaro-freire-neovim_config-625ca2e/config_neovim.sh . && rm icaro-freire-neovim_config-625ca2e.zip -rf
+unzip icaro-freire-neovim_config-625ca2e.zip && rm icaro-freire-neovim_config-625ca2e.zip && mv icaro-freire-neovim_config-625ca2e/config_neovim.sh . && rm icaro-freire-neovim_config-625ca2e -rf
 ```
 4. por fim, execute `./config_neovim.sh`
 
