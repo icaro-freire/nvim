@@ -14,7 +14,7 @@
 
 echo "-- Removendo possíveis configurações antigas"
 
-rm ~/.config/nvim ~/.local/share/nvim -rf
+rm ~/.config/nvim ~/.config/TabNine ~/.local/share/nvim -rf
 
 sleep 2s 
 
@@ -42,7 +42,7 @@ echo ""
 
 echo "-- Comentando as linhas do init.lua"
 
-sed -i 's/^require/--require/g' neovim_config/init.lua
+sed -i '3,13 s/^require/--require/g' neovim_config/init.lua
 
 sleep 3s
 
@@ -108,9 +108,10 @@ echo "Feito 6/8"
 # passo 7 ---------------------------------------------------------------------
 
 echo "-- Será aberto o arquvo init.lua para instalação do Packer"
-echo "   Digite :PackerInstall e, depois de concluído, saia do nvim (:q duas vezes)"
+echo "   Digite :PackerInstall"
+echo "   Após a conclusão, saia do nvim (:q duas vezes)"
 
-sleep 8s 
+sleep 12s 
 
 nvim ~/.config/nvim/init.lua
 
@@ -123,11 +124,14 @@ echo ""
 # passo 8 ---------------------------------------------------------------------
 
 echo "-- Novamente, será aberto o init.lua"
-echo "   Dessa vez, retire os comentários (basta retirar os traços -- ) do nome require"
-echo "   :1,13 s/^--r/r (faz mais rápido)
+echo "   (uma página web do tabnine será aberta)" 
+echo "   (ignore-a e volte ao terminal)"
+echo "   Dessa vez, retire os comentários do nome require"
+echo "   (basta retirar os traços -- da frente)"
+echo "   :5,13 s/^--r/r (faz mais rápido)"
 echo "   Depois digite, no modo normal, :wq"
 
-sleep 12s
+sleep 15s
 
 nvim ~/.config/nvim/init.lua
 
