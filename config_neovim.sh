@@ -105,6 +105,8 @@ sleep 4s
 
 echo "Feito 6/8"
 
+echo ""
+
 # passo 7 ---------------------------------------------------------------------
 
 echo "-- Será aberto o arquvo init.lua para instalação do Packer"
