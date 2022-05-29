@@ -55,7 +55,7 @@ unzip icaro-freire-neovim_config-a22afb8.zip && rm icaro-freire-neovim_config-a2
 [GIT]: https://git-scm.com/
 [ZIP]: https://github.com/icaro-freire/neovim_config/zipball/config_neovim
 
-## Uma resalva
+## Uma ressalva
 
 Os testes foram realizados em uma distribuição `Pop!_OS LTS 20.04`; numa distribuição `Xububtu 20.04 LTS` e numa distribuição `Debian 11`.
 
