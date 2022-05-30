@@ -1,3 +1,10 @@
+-- atalhos para LaTeX =========================================================
+vim.cmd([[ map <C-b> :!arara -L pt-BR main.tex<CR>]])
+vim.cmd([[ map <C-v> :!arara -L pt-BR -v main.tex<CR>]])
+vim.cmd([[ map <C-z> :!zathura main.pdf<CR>]])
+
+
+
 -- atalhos do NERDTree ======================================================== 
 -- mostra arquivos
 vim.cmd([[ nnoremap <C-n> :NERDTree<CR> ]])
