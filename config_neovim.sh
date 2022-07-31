@@ -10,11 +10,27 @@
 #                   Licença  : The MIT Licence (MIT) 
 #==============================================================================
 
+# antes de começar ============================================================
+
+# url das configurações -------------------------------------------------------
+
+URL_CONFIG='https://github.com/icaro-freire/neovim_config.git'
+
+# diretórios utilizados -------------------------------------------------------
+
+DIR_NVIM="$HOME/.config/nvim"
+DIR_TabNine="$HOME/.config/TabNine"
+DIR_LOCAL_NVIM="$HOME/.local/share/nvim"
+DIR_LOCAL_TabNine="$HOME/.local/share/TabNine"
+DIR_TMP="neovim_config"
+
+# iniciando o script ==========================================================
+
 # passo 0 ---------------------------------------------------------------------
 
 echo "-- Removendo possíveis configurações antigas"
 
-rm ~/.config/nvim ~/.config/TabNine ~/.local/share/nvim -rf
+rm  "$DIR_NVIM" "$DIR_TabNine" "$DIR_LOCAL_NVIM" "$DIR_LOCAL_TabNine" -rf
 
 sleep 2s 
 
@@ -28,7 +44,7 @@ echo "-- Clonando o repositório"
 
 sleep 2s 
 
-git clone https://github.com/icaro-freire/neovim_config.git 
+git clone "$URL_CONFIG" 
 
 sleep 2s
 
@@ -42,7 +58,7 @@ echo ""
 
 echo "-- Comentando as linhas do init.lua"
 
-sed -i '3,13 s/^require/--require/g' neovim_config/init.lua
+sed -i '3,13 s/^require/--require/g' "$DIR_TMP/init.lua"
 
 sleep 3s
 
@@ -56,7 +72,7 @@ echo ""
 
 echo "-- Criando uma pasta de configurações em seu diretório HOME"
 
-mkdir -p ~/.config/nvim 
+mkdir -p "$DIR_NVIM"
 
 sleep 4s
 
@@ -70,7 +86,7 @@ echo ""
 
 echo "-- Movendo os arquivos necessários para o diretório de configurações" 
 
-mv neovim_config/init.lua neovim_config/lua ~/.config/nvim
+mv "$DIR_TMP/init.lua" "$DIR_TMP/lua" "$DIR_NVIM"
 
 sleep 4s
 
@@ -84,7 +100,7 @@ echo ""
 
 echo "-- Removendo o já desnecessário diretório neovim_config"
 
-rm neovim_config -rf
+rm "$DIR_TMP" -rf
 
 sleep 4s
 
@@ -115,7 +131,7 @@ echo "   Após a conclusão, saia do nvim (:q duas vezes)"
 
 sleep 12s 
 
-nvim ~/.config/nvim/init.lua
+nvim "$DIR_NVIM/init.lua" 
 
 echo "Feito 7/8"
 
@@ -133,9 +149,9 @@ echo "   (basta retirar os traços -- da frente)"
 echo "   :5,13 s/^--r/r (faz mais rápido)"
 echo "   Depois digite, no modo normal, :wq"
 
-sleep 15s
+sleep 18s
 
-nvim ~/.config/nvim/init.lua
+nvim "$DIR_NVIM/init.lua" 
 
 sleep 2s
 
@@ -154,3 +170,7 @@ sleep 2s
 echo "   A instalação das configurações chegou ao FIM"
 
 sleep 1s
+
+# fim do script ===============================================================
+
+exit
