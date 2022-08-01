@@ -1,3 +1,5 @@
+:construction:
+
 # Configurações pessoais para o Neovim
 
 > Esse repositório servirá para versionamento de minhas configurações para o Neovim.
