@@ -9,7 +9,26 @@ vim.cmd([[ let g:airline#extensions#tabline#formatter = 'unique_tail' ]])
 vim.cmd([[ let g:airline#extensions#tabline#enabled = 1 ]])
 
 -- configuração para tema de cores ============================================
-vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]])
+-- vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]]) -> anterior
+
+require("gruvbox").setup({
+    undercurl = true,
+    underline = true,
+    bold = true, 
+    italic = false,
+    strikethrough = true,
+    invert_selection = false, 
+    invert_signs = false,
+    invert_tabline = false, 
+    invert_intend_guides = false,
+    inverse = true,
+    contrast = "", 
+    overrides = {},
+  }) 
+
+vim.cmd([[ let g:airline_theme='base16_gruvbox_dark_pale' ]])
+vim.o.background = "dark" 
+vim.cmd([[colorscheme gruvbox]])
 
 -- congigurações básicas ======================================================
 -- ativando sintaxe
