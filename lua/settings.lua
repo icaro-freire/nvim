@@ -13,7 +13,7 @@ vim.cmd([[ let g:airline#extensions#tabline#enabled = 1 ]])
 
 require("gruvbox").setup({
     undercurl = true,
-    underline = true,
+    underline = false,
     bold = true, 
     italic = false,
     strikethrough = true,

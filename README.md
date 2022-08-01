@@ -1,5 +1,3 @@
-:construction:
-
 # Configurações pessoais para o Neovim
 
 > Esse repositório servirá para versionamento de minhas configurações para o Neovim.
@@ -29,33 +27,32 @@ Esse repositório está organizado assim:
 
 ## Instalação com script
 
-O _script_ [config_neovim][SCRIPT] fará uma instalação quase automática das configurações deste 
-repositório.
+O _script_ [instala_config_neovim][SCRIPT] fará uma instalação quase automática das configurações deste repositório.
 
 > :zap: É necessário ter o [Git][GIT] instalado em seu sistema.
 
 Para executar o _script_, siga os passos:
 
-1. faça o _download_ do ramo onde se encontra o arquivo, por esse link: [:link: config_neovim][ZIP];
+1. faça o _download_ do ramo onde se encontra o arquivo, por esse link: [:link: instala_config_neovim][ZIP];
 2. abra o terminal no diretório onde o arquivo do _download_ foi salvo;
 3. execute o seguinte comando:
 ```
-unzip icaro-freire-neovim_config-a22afb8.zip && rm icaro-freire-neovim_config-a22afb8.zip && mv icaro-freire-neovim_config-a22afb8/config_neovim.sh . && rm icaro-freire-neovim_config-a22afb8 -rf
+unzip icaro-freire-nvim-938e242.zip && rm icaro-freire-nvim-938e242.zip && mv icaro-freire-nvim-938e242/instala_config_neovim.sh . && rm icaro-freire-nvim-938e242 -rf
 ```
-4. por fim, execute `./config_neovim.sh`
+4. por fim, execute `./instala_config_neovim.sh`
 
 :heavy_exclamation_mark: O conjunto de comandos em "3." faz com que apenas o arquivo  `config_neovim.sh` permaneça em sua máquina, espeficicamente no diretório onde você salvou o arquivo `.zip`:
 
-- `unzip icaro-freire-neovim_config-a22afb8.zip`;  extrai os arquivos num diretório por nome `icaro-freire-neovim_config-a22afb8`
-- `rm icaro-freire-neovim_config-a22afb8.zip`; deleta o arquivo `.zip`
-- `mv icaro-freire-neovim_config-a22afb8/config_neovim.sh .`; move o arquivo `config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
-- `rm icaro-freire-neovim_config-a22afb8 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
+- `unzip icaro-freire-nvim-938e242.zip`;  extrai os arquivos num diretório por nome `icaro-freire-nvim-938e242`
+- `rm icaro-freire-nvim-938e242.zip`; deleta o arquivo `.zip`
+- `mv icaro-freire-nvim-938e242/instala_config_neovim.sh .`; move o arquivo `instala_config_neovim.sh` para o diretório onde o arquivo `.zip` foi salvo 
+- `rm icaro-freire-nvim-938e242 -rf`; deleta o diretório que foi extraído do arquivo `.zip`
 
-:bangbang: Já o comando "4.", executa o _script_ `config_neovim.sh`.
+:bangbang: Já o comando "4.", executa o _script_ `instala_config_neovim.sh`.
 
-[SCRIPT]: https://github.com/icaro-freire/neovim_config/blob/config_neovim/config_neovim.sh
+[SCRIPT]: https://github.com/icaro-freire/nvim/blob/config_neovim/instala_config_neovim.sh
 [GIT]: https://git-scm.com/
-[ZIP]: https://github.com/icaro-freire/neovim_config/zipball/config_neovim
+[ZIP]: https://github.com/icaro-freire/nvim/zipball/config_neovim
 
 ## Uma ressalva
 
