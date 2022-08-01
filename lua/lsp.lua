@@ -1,4 +1,4 @@
--- configurações gerais do LSP ================================================
+-- configurações gerais do LSP =============================================
 
 local has_any_words_before = function()
   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then

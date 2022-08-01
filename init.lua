@@ -1,13 +1,13 @@
--- carregando plugins =========================================================
+-- carregando plugins ======================================================
 require('plugins')
 
--- carregando LSP e AutoComplete ==============================================
+-- carregando LSP e AutoComplete ===========================================
 require('tabnine')
 require('lsp')
 require('complete')
 
--- carregando configurações ===================================================
+-- carregando configurações ================================================
 require('settings')
 
--- carregando mapeamentos/atalhos =============================================
+-- carregando mapeamentos/atalhos ==========================================
 require('mappings')

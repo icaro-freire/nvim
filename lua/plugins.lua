@@ -1,10 +1,10 @@
--- intalação de plugins =======================================================
+-- intalação de plugins ====================================================
 
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
--- LSP e AutoComplete ---------------------------------------------------------
+-- LSP e AutoComplete ------------------------------------------------------
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -17,7 +17,7 @@ return require('packer').startup(function()
   use 'ray-x/lsp_signature.nvim'
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'onsails/lspkind-nvim'
--- minhas preferências --------------------------------------------------------
+-- minhas preferências -----------------------------------------------------
   --use 'morhetz/gruvbox' ----------------------> tema de cores
   use 'ellisonleao/gruvbox.nvim' -------------> tema gruvbox em lua
   use 'vim-airline/vim-airline' --------------> barra de status

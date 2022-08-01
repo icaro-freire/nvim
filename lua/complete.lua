@@ -1,4 +1,4 @@
--- condição para arquivos Markdown ============================================
+-- condição para arquivos Markdown =========================================
 if extension == "md" then
   require("tabnine")
 else

@@ -1,15 +1,15 @@
--- configuração para NERDTree =================================================
+-- configuração para NERDTree ==============================================
 vim.cmd([[ let NERDTreeQuitOnOpen=1 ]])
 
--- configurando airline =======================================================
+-- configurando airline ====================================================
 -- estilo simples de nome de abas
 vim.cmd([[ let g:airline#extensions#tabline#formatter = 'unique_tail' ]])
 
 -- mostra nome nas abas
 vim.cmd([[ let g:airline#extensions#tabline#enabled = 1 ]])
 
--- configuração para tema de cores ============================================
--- vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]]) -> anterior
+-- configuração para tema de cores =========================================
+-- vim.cmd([[ autocmd vimenter * ++nested colorscheme gruvbox ]]) -> antigo 
 
 require("gruvbox").setup({
     undercurl = true,
@@ -30,7 +30,7 @@ vim.cmd([[ let g:airline_theme='base16_gruvbox_dark_pale' ]])
 vim.o.background = "dark" 
 vim.cmd([[colorscheme gruvbox]])
 
--- congigurações básicas ======================================================
+-- congigurações básicas ===================================================
 -- ativando sintaxe
 vim.cmd([[ syntax enable ]])
 
@@ -57,7 +57,7 @@ vim.cmd([[ set expandtab ]])
 -- linha vertical em 80 caracteres
 vim.cmd([[ set colorcolumn=80 ]])
 
--- configuração do Packer =====================================================
+-- configuração do Packer ==================================================
 -- faz a compilação automaticamente após instalação
 vim.cmd([[
   augroup packer_user_config
