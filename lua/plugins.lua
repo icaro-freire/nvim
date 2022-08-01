@@ -18,8 +18,10 @@ return require('packer').startup(function()
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'onsails/lspkind-nvim'
 -- minhas preferências --------------------------------------------------------
-  use 'morhetz/gruvbox' ----------------------> tema de cores
+  --use 'morhetz/gruvbox' ----------------------> tema de cores
+  use 'ellisonleao/gruvbox.nvim' -------------> tema gruvbox em lua
   use 'vim-airline/vim-airline' --------------> barra de status
+  use 'vim-airline/vim-airline-themes' -------> temas para barra de status
   use 'ryanoasis/vim-devicons' ---------------> icones nos arquivos
   use 'lukas-reineke/indent-blankline.nvim' --> linhas de indentação
   use 'tpope/vim-commentary' -----------------> comentar linhas
