@@ -28,7 +28,7 @@ require("gruvbox").setup({
 
 vim.cmd([[ let g:airline_theme='base16_gruvbox_dark_pale' ]])
 vim.o.background = "dark" 
--- vim.o.background = "light" 
+--vim.o.background = "light" 
 vim.cmd([[colorscheme gruvbox]])
 
 -- congigurações básicas ===================================================
@@ -45,7 +45,9 @@ vim.cmd([[ set number ]])
 vim.cmd([[ set mouse=a ]])
 
 -- habilita área de transferência
-vim.cmd([[ set clipboard=unnamedplus ]])
+  -- obs: deve-se instalar o xclip ou wl-paste, se estiver em Xorg (X11) ou 
+  -- Wayland, respectivamente
+vim.cmd([[ set clipboard+=unnamedplus ]])
 
 -- linha corrente destacada 
 vim.cmd([[ set cursorline ]])
@@ -57,6 +59,13 @@ vim.cmd([[ set expandtab ]])
 
 -- linha vertical em 80 caracteres
 vim.cmd([[ set colorcolumn=80 ]])
+
+-- desabilita as setas
+vim.cmd([[ noremap <Up> <Nop> ]])
+vim.cmd([[ noremap <Down> <Nop> ]])
+vim.cmd([[ noremap <Left> <Nop> ]])
+vim.cmd([[ noremap <Right> <Nop> ]])
+
 
 -- configuração do Packer ==================================================
 -- faz a compilação automaticamente após instalação
