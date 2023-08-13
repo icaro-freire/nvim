@@ -1,6 +1,6 @@
 -- atalhos para LaTeX ======================================================
 vim.cmd([[ map <C-b> :!arara -L pt-BR main.tex<CR>]])
-vim.cmd([[ map <C-v> :!arara -L pt-BR -v main.tex<CR>]])
+vim.cmd([[ map <C-a> :!arara -L pt-BR -v main.tex<CR>]])
 vim.cmd([[ map <C-z> :!zathura main.pdf<CR>]])
 
 
@@ -24,4 +24,4 @@ vim.cmd([[ vnoremap <space>/ :Commentary<CR> ]])
 
 -- configurações gerais ====================================================
 -- seleciona tudo com 'Crtl + a'
-vim.cmd([[ map <C-a> ggVG ]])
+--vim.cmd([[ map <C-a> ggVG ]])
