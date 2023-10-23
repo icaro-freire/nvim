@@ -1,6 +1,6 @@
 -- atalhos para LaTeX ======================================================
 vim.cmd([[ map <C-b> :!arara -L pt-BR main.tex<CR>]])
-vim.cmd([[ map <C-x> :!arara -L pt-BR -v main.tex<CR>]])
+vim.cmd([[ map <space>v :!arara -L pt-BR -v main.tex<CR>]])
 vim.cmd([[ map <C-z> :!zathura main.pdf<CR>]])
 
 
