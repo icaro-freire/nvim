@@ -1,13 +1,9 @@
--- carregando plugins ======================================================
-require('plugins')
+-- carregando módulos
 
--- carregando LSP e AutoComplete ===========================================
-require('tabnine')
-require('lsp')
-require('complete')
+require 'settings'
+require 'plugins'
+require 'plugins_configs'
+require 'mappings'
 
--- carregando configurações ================================================
-require('settings')
-
--- carregando mapeamentos/atalhos ==========================================
-require('mappings')
+-- meus snippets
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets/"})

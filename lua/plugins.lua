@@ -1,38 +1,95 @@
--- intalação de plugins ====================================================
+-- função para instalação automática
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({
+      'git', 'clone', '--depth', '1',
+      'https://github.com/wbthomason/packer.nvim', install_path
+    })
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
 
-vim.cmd [[packadd packer.nvim]]
+-- criando variável 
+local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
--- LSP e AutoComplete ------------------------------------------------------
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp'
+-- instalando plugins
+return require('packer').startup(function(use)
+  --
+  -- gerenciador de plugins 
+  use 'wbthomason/packer.nvim' ---------------------------------------> packer
+  --
+  -- lsp e mason
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
+  --
+  -- cmp & LuaSnip
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use {
+    'L3MON4D3/LuaSnip',
+    tag = 'v2.*',
+    dependencies = { "rafamadriz/friendly-snippets" },
+  }
   use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
-  use 'ray-x/lsp_signature.nvim'
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
-  use 'onsails/lspkind-nvim'
--- minhas preferências -----------------------------------------------------
-  --use 'morhetz/gruvbox' ----------------------> tema de cores
-  use 'ellisonleao/gruvbox.nvim' -------------> tema gruvbox em lua
-  use 'vim-airline/vim-airline' --------------> barra de status
-  use 'vim-airline/vim-airline-themes' -------> temas para barra de status
-  use 'ryanoasis/vim-devicons' ---------------> icones nos arquivos
-  use 'lukas-reineke/indent-blankline.nvim' --> linhas de indentação
-  use 'tpope/vim-commentary' -----------------> comentar linhas
-  use 'Raimondi/delimitMate' -----------------> fecha parênteses, etc.
-  use 'preservim/nerdtree' -------------------> mostra os arquivos
-  use 'jalvesaq/Nvim-R' ----------------------> para usar o R
+  use 'onsails/lspkind.nvim'
+  -- 
+  -- tabnine machine learning
+  use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+  --
+  -- estética
+  -- use { "catppuccin/nvim", as = "catppuccin" } -------------> esquema de cores
+  use { "ellisonleao/gruvbox.nvim" }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
+  use 'nvim-tree/nvim-web-devicons' ---------------------> icones nos arquivos
+  use {
+    'nvim-lualine/lualine.nvim', -----------------------------> barra inferior
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  use 'romgrk/barbar.nvim' --------------------------------> abas dos arquivos
+  use {
+    'nvim-tree/nvim-tree.lua', -----------------------> explorador de arquivos
+    requires = { 'nvim-tree/nvim-web-devicons' },
+  }
+  use 'lukas-reineke/indent-blankline.nvim' -------> linha vertical indentação
+  use {
+    'numToStr/Comment.nvim', ---------------------------> para comentar código
+    config = function()
+        require('Comment').setup()
+    end
+  }
+  use {
+	  "windwp/nvim-autopairs", --------------------> autocompletar delimitadores
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  --
+  -- programação & cia
+  use 'jalvesaq/Nvim-R' ---------------------------------------> para usar o R
+  use 'jalvesaq/vimcmdline' ------------------------------------> python & cia
   use({
-    "iamcco/markdown-preview.nvim",
+    "iamcco/markdown-preview.nvim", ------------------------> markdown preview
     run = function() vim.fn["mkdp#util#install"]() end,
-  }) -----------------------------------------> preview do markdown
+  })
+  use 'lewis6991/gitsigns.nvim' -------------------------------> status do git
+  --
+  -- final do bootstrap
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
-
-
-
