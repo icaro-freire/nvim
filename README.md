@@ -1,6 +1,7 @@
 # Configurações pessoais para o Neovim
 
-> Esse repositório servirá para versionamento de minhas configurações para o Neovim.
+> (versão antiga) Esse repositório servirá para versionamento de minhas configurações para o Neovim.
+
 
 ## Mais do que um editor ...
 
