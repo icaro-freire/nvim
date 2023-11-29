@@ -48,7 +48,6 @@ return require('packer').startup(function(use)
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
   --
   -- estética
-  -- use { "catppuccin/nvim", as = "catppuccin" } -------------> esquema de cores
   use { "ellisonleao/gruvbox.nvim" }
   use {
     'nvim-treesitter/nvim-treesitter',

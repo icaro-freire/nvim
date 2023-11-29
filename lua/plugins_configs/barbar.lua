@@ -1,4 +1,3 @@
-
 -- mapeamentos para barbar 
 
 local map = vim.api.nvim_set_keymap
