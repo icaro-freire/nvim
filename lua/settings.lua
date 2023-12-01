@@ -39,4 +39,4 @@ vim.opt.clipboard = 'unnamedplus'
 --    sistema, para depois instalar o pacote correspondente
 --    `echo $XDG_SESSION_TYPE`
 --       ✓ X11 ⇒ instalar o xclip
---       ✗ X11 ⇒ instalar o wl-paste
+--       ✗ X11 ⇒ instalar o wl-clipboard
