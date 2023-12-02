@@ -8,3 +8,12 @@ vim.keymap.set('n', 'bb', ':! arara -L pt-BR %:p <cr>')
 
 -- mapeamentos para python
 vim.keymap.set('n', '<leader>p', ':! python3 %:p <cr>')
+
+-- limpeza de busca 
+vim.keymap.set("n", '<F5>', ':let @/="" <cr>', {noremap = true})
+
+-- parar Lsp
+vim.keymap.set("n", '<F6>', ':LspStop <cr>', {noremap = true})
+
+-- verificar ortografia 
+vim.keymap.set('n', '<F7>', ':set spell <cr>', {noremap = true})
