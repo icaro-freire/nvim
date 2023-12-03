@@ -5,6 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 
 -- habilita linha vertical no explorador
 require("nvim-tree").setup({
+  view = {
+    width = 26,
+  },
   renderer = {
     indent_markers = {
       enable = true,
