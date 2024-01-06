@@ -86,6 +86,7 @@ return require('packer').startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'lewis6991/gitsigns.nvim' -------------------------------> status do git
+  use {"meatballs/notebook.nvim"} --------------------> abrir jupyter notebook
   --
   -- final do bootstrap
   if packer_bootstrap then
