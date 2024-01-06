@@ -1,11 +1,11 @@
 -- fold permanent
-vim.cmd([[
-  augroup AutoSaveFolds
-    autocmd!
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent loadview
-  augroup END
-]])
+-- vim.cmd([[
+--   augroup AutoSaveFolds
+--     autocmd!
+--     autocmd BufWinLeave *.* mkview
+--     autocmd BufWinEnter *.* silent loadview
+--   augroup END
+-- ]])
 
 -- numeração
 vim.opt.number = true
