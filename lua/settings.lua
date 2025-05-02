@@ -32,6 +32,11 @@ vim.cmd([[ set spelllang=pt_br ]])
 -- habilita área de transferância
 vim.opt.clipboard = 'unnamedplus'
 
+-- folds 
+vim.cmd([[autocmd FileType tex setlocal foldmethod=manual
+]])
+
+
 -- OBS
 -- 1. Nem sempre a habilitação para área de transferência está ativa.
 --    Caso não esteja funcionando, deve-se instalar um pacote. 
